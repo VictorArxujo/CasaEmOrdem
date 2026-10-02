@@ -1,0 +1,11 @@
+<resources>
+    <color name="ink">#20352D</color>
+    <color name="muted">#68766E</color>
+    <color name="canvas">#F5F6F0</color>
+    <color name="paper">#FFFFFF</color>
+    <color name="forest">#285544</color>
+    <color name="lime">#D9F276</color>
+    <color name="sage">#E7EDE4</color>
+    <color name="line">#DCE3DA</color>
+    <color name="coral">#D87555</color>
+</resources>

@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/canvas">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="22dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="24dp">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="‹  Voltar"
+                android:textAllCaps="false"
+                android:textColor="@color/forest"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Nova tarefa"
+                android:textColor="@color/ink"
+                android:textSize="29sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="24dp"
+                android:text="O que precisa ser feito?"
+                android:textColor="@color/muted"
+                android:textSize="15sp" />
+
+            <TextView style="@style/FieldLabel" android:text="Nome da tarefa" />
+            <EditText
+                android:id="@+id/taskName"
+                style="@style/FormField"
+                android:hint="Ex.: Limpar a geladeira"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="20dp"
+                android:text="Ambiente" />
+            <Spinner
+                android:id="@+id/roomSpinner"
+                style="@style/FormField"
+                android:entries="@array/rooms" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:layout_marginTop="20dp"
+                android:text="Frequência" />
+            <Spinner
+                android:id="@+id/frequencySpinner"
+                style="@style/FormField"
+                android:entries="@array/frequencies" />
+
+            <Button
+                android:id="@+id/saveTaskButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_lime_button"
+                android:text="Salvar tarefa"
+                android:textAllCaps="false"
+                android:textColor="@color/ink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_navigation" />
+</LinearLayout>
