@@ -1,17 +1,12 @@
 <resources>
     <string name="app_name">CasaEmOrdem</string>
+
+    <!-- Ambientes disponíveis para classificar as tarefas. -->
     <string-array name="rooms">
         <item>Cozinha</item>
         <item>Banheiro</item>
         <item>Quarto</item>
         <item>Sala</item>
         <item>Área externa</item>
-    </string-array>
-    <string-array name="frequencies">
-        <item>Pontual</item>
-        <item>Diária</item>
-        <item>Semanal</item>
-        <item>Quinzenal</item>
-        <item>Mensal</item>
     </string-array>
 </resources>

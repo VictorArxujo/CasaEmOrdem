@@ -1,8 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/canvas">
+    android:background="@color/canvas"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,39 +15,44 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="22dp"
-            android:paddingTop="24dp"
+            android:paddingTop="22dp"
             android:paddingEnd="22dp"
             android:paddingBottom="24dp">
 
             <Button
                 android:id="@+id/backButton"
                 android:layout_width="wrap_content"
-                android:layout_height="44dp"
+                android:layout_height="42dp"
                 android:background="?android:attr/selectableItemBackground"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
                 android:text="‹  Voltar"
                 android:textAllCaps="false"
                 android:textColor="@color/forest"
                 android:textSize="15sp" />
 
             <TextView
+                android:id="@+id/formTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="Nova tarefa"
+                android:layout_marginTop="14dp"
                 android:textColor="@color/ink"
-                android:textSize="29sp"
+                android:textSize="27sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/formSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="24dp"
-                android:text="O que precisa ser feito?"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="22dp"
                 android:textColor="@color/muted"
                 android:textSize="15sp" />
 
-            <TextView style="@style/FieldLabel" android:text="Nome da tarefa" />
+            <TextView
+                style="@style/FieldLabel"
+                android:text="Nome da tarefa" />
+
             <EditText
                 android:id="@+id/taskName"
                 style="@style/FormField"
@@ -58,30 +63,51 @@
                 style="@style/FieldLabel"
                 android:layout_marginTop="20dp"
                 android:text="Ambiente" />
+
             <Spinner
                 android:id="@+id/roomSpinner"
-                style="@style/FormField"
-                android:entries="@array/rooms" />
+                style="@style/FormField" />
 
             <TextView
                 style="@style/FieldLabel"
                 android:layout_marginTop="20dp"
                 android:text="Frequência" />
+
             <Spinner
                 android:id="@+id/frequencySpinner"
-                style="@style/FormField"
-                android:entries="@array/frequencies" />
+                style="@style/FormField" />
+
+            <TextView
+                android:id="@+id/lastRunLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/muted"
+                android:textSize="13sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/saveTaskButton"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginTop="30dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="26dp"
                 android:background="@drawable/bg_lime_button"
                 android:text="Salvar tarefa"
                 android:textAllCaps="false"
                 android:textColor="@color/ink"
                 android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/deleteTaskButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_outline_button"
+                android:text="Excluir tarefa"
+                android:textAllCaps="false"
+                android:textColor="@color/coral"
+                android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
